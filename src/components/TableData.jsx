@@ -6,11 +6,14 @@ const TableData = ({ data }) => {
     <div className='tableContainer'>
       <table>
         <thead>
-          <th>ID</th>
-          <th>Name</th>
-          <th>Age</th>
-          <th>City</th>
-          <th>Occupation</th>
+          <tr>
+
+            <th>ID</th>
+            <th>Name</th>
+            <th>Age</th>
+            <th>City</th>
+            <th>Occupation</th>
+          </tr>
         </thead>
         <tbody>
           {
