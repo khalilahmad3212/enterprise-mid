@@ -1,12 +1,13 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import './Filter.css'
 
-const Filter = ({ data, setData }) => {
+const Filter = ({ tableData, setData }) => {
 
+  const [data, setMyData] = useState(tableData)
   const [name, setName] = useState('');
   const [age, setAge] = useState('');
-  const [city, setCity] = useState('select')
-  const [occupation, setOccupation] = useState('select')
+  const [city, setCity] = useState()
+  const [occupation, setOccupation] = useState()
 
   const filter = () => {
     let temp = data;
@@ -16,7 +17,6 @@ const Filter = ({ data, setData }) => {
 
     if (age) {
       temp = temp.filter((e) => e.age == age)
-
     }
 
     if (city) {
@@ -28,6 +28,16 @@ const Filter = ({ data, setData }) => {
     }
 
     setData(temp)
+  }
+
+
+  const reset = () => {
+    setName('')
+    setCity('')
+    setOccupation('')
+    setAge('')
+    setData(data)
+    setMyData(tableData)
   }
 
   return (
@@ -54,7 +64,10 @@ const Filter = ({ data, setData }) => {
           }
         </select>
       </div>
-      <button onClick={filter}>Filter</button>
+      <div className='buttons'>
+        <button onClick={filter}>Filter</button>
+        <button onClick={reset}>Reset</button>
+      </div>
     </div>
   )
 }

@@ -17,6 +17,12 @@
   gap: 8px;
   max-width: max-content;
 }
+
+.buttons {
+  display: flex;
+  gap: 8px;
+}
 button {
+  cursor: pointer;
   max-width: max-content;
 }
