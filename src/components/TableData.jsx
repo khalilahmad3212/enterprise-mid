@@ -3,7 +3,7 @@ import './TableData.css'
 
 const TableData = ({ data }) => {
   return (
-    <div>
+    <div className='tableContainer'>
       <table>
         <thead>
           <th>ID</th>
@@ -15,7 +15,7 @@ const TableData = ({ data }) => {
         <tbody>
           {
             data?.map((item) => (
-              <tr id={item.id}>
+              <tr key={item.id}>
                 <td>{item.id}</td>
                 <td>{item.name}</td>
                 <td>{item.age}</td>

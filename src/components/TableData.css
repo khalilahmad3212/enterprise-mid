@@ -1,9 +1,21 @@
+.tableContainer {
+  margin-top: 50px;
+}
+
 table {
-  width: 70%;
+  width: 100%;
   margin: auto;
+}
+
+thead {
+  margin-bottom: 30px;
 }
 
 th {
   text-align: start;
   margin-bottom: 20px;
+}
+
+tr {
+  border-bottom: 2px solid black;
 }

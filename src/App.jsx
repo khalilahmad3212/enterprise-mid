@@ -9,10 +9,10 @@ const tableData = [
 function App() {
   const [data, setData] = useState(tableData)
   return (
-    <>
+    <div className='app'>
       <Filter data={tableData} setData={setData} />
       <TableData data={data} />
-    </>
+    </div>
   )
 }
 

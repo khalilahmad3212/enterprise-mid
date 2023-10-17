@@ -1,0 +1,22 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.inputs {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  max-width: max-content;
+}
+
+.dropdowns {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  max-width: max-content;
+}
+button {
+  max-width: max-content;
+}
